@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8 " />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tea House</title>
     <!-- font awesome -->
@@ -21,11 +21,46 @@
       rel="stylesheet"
     />
 
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                "description-color": '#777',
+              }
+            }
+          }
+        }
+      </script>
+
     <style>
       body {
         font-family: "Manrope", sans-serif;
       }
     </style>
   </head>
-  <body></body>
+  <body>
+    <header class="container mx-auto">
+        <section class="flex gap-5 item-center lg:gap-10 flex-col lg:flex-row py-5 lg:py-16">
+            <div class="flex-1 space-y-6">
+                <h1 class="lg:text-8xl font-extrabold">It's good <br>
+                    tea time at The Tea House</h1>
+                <p class="text-xl font-normal text-description-color">Tea and Botanical Solutions Supplier Give Optimum Satisfaction To Your Taste Buds.</p>
+                <button class="py-5 px-6 text-white rounded-xl bg-gradient-to-r from-[#FF8938] to-[#F00]">Explore More <i class="fa-solid ml-4 fa-arrow-right-long"></i>  </button>
+                
+            </div>
+            <div class="flex-1 relative"><img src="images/banner.png" alt="">
+                <div class="absolute shadow-xl flex gap-5 py-8 px-10 rounded-2xl bg-white items-center z-10 bottom-8 left-12">
+                    <i class="fa-solid text-yellow-500 text-4xl fa-star"></i>
+                    <div>
+                        <h3 class="text-3xl font-extrabold">5.00</h3>
+                        <p class="text-description-color">Trust Pilot Ratings</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    </header>
+  </body>
 </html>
